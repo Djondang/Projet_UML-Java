@@ -47,8 +47,8 @@ public final class Controller implements IController {
      * @param pview
      *            the new view
      */
-	private void setView(final IView pview) {
-		this.view = pview;
+	private void setView(final IView view) {
+		this.view = view;
 	}
 
 	/**
