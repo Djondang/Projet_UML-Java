@@ -18,7 +18,7 @@ public abstract class BoulderDash {
         final IBoulderDashModel model = new IBoulderDashModel("Surf1.txt", startX, startY);
         final BoulderDashView view = new BoulderDashView(model.getSurf(), model.getPlayer());
         final IBoulderDashController controller = new IBoulderDashController(view, model);
-        view.setOrderPerformer(controller.getOrderPeformer());
+        view.setOrderPerformer(controller.getOrderPerformer());
         //controller.play();
         controller.saveCircuit(model.getSurf());
     }
