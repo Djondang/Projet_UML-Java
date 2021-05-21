@@ -3,6 +3,7 @@ import java.util.Observable;
 
 import Mobile.IMobile;
 
+@SuppressWarnings({ "unused", "deprecation" })
 public class BoulderDashModel {
 	private ISurf surf;
 	private IMobile player;

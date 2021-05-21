@@ -12,6 +12,7 @@ public class Mobile {
 
 	private Boolean alive = true;
 	
+	@SuppressWarnings("unused")
 	private ISurf surf;
 	
 	public Point getPosition() {
@@ -93,6 +94,10 @@ public class Mobile {
 	 public Boolean isCrashed() {
 	        return this.getSurf().getOnTheSurfXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
 	    }
+
+	public void setSurf(ISurf surf) {
+		this.surf = surf;
+	}
 	 
 	        
 	        

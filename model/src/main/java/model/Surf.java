@@ -5,6 +5,7 @@ import java.util.Observable;
 
 import Element.IElement;
 
+@SuppressWarnings("deprecation")
 public class Surf extends Observable implements ISurf {
 	
 	/** The width. */
@@ -40,7 +41,8 @@ public class Surf extends Observable implements ISurf {
         return this.onTheSurf[x][y];
     }
 
-    private void setOnTheSurfXY(final IElement element, final int x, final int y) {
+    @SuppressWarnings("unused")
+	private void setOnTheSurfXY(final IElement element, final int x, final int y) {
         this.onTheSurf[x][y] = element;
     }
 	private void loadFile(String fileName) {

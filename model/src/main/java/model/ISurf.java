@@ -4,6 +4,7 @@ import java.util.Observable;
 
 import Element.IElement;
 
+@SuppressWarnings("deprecation")
 public interface ISurf {
 
 	public int getWidth();
