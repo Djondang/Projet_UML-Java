@@ -8,9 +8,12 @@ import java.awt.GridLayout;
 
 public class BoulderDashView extends JPanel implements IBoulderDashView {
     public static final int CAVE_SIZE = 20;
+    private final ViewSound viewSound;
     private JLabel[][] labels;
     private Icon[] icons;
     public BoulderDashView(int[][] cave) {
+    	this.viewSound = new ViewSound("C:\\Users\\kanaa\\git\\Projet_UML-Java\\main\\Sound\\y2mate.com-Super-Mario-Bros-Theme-Song.wav");
+    	this.viewSound.start();
         icons = new Icon[9];
         icons[0] = new ImageIcon("./images/boulder.png");
         icons[1] = new ImageIcon("./images/rockford.png");
@@ -26,6 +29,8 @@ public class BoulderDashView extends JPanel implements IBoulderDashView {
             for (int y = 0; y < CAVE_SIZE; y++) {
                 labels[x][y] = new JLabel(icons[cave[y][x]]);
                 add(labels[x][y]);
+                
+         
             }     
         }
     }
