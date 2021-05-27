@@ -1,7 +1,7 @@
 package contract;
 
-public interface IGameModel {
-	
+public interface IBoulderDashModel {
+
 	public void moveUp();
     public void moveDown(); 
     public void moveLeft(); 
@@ -15,5 +15,5 @@ public interface IGameModel {
     public String getSteps(); 
     public void tick();
     public int[][] getCaveArray();
-
+    
 }

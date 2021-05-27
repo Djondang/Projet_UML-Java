@@ -9,6 +9,7 @@ import entity.HelloWorld;
  *
  * @author Jean-Aymeric Diet
  */
+@SuppressWarnings("deprecation")
 public interface IModel {
 
 	/**

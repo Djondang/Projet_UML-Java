@@ -3,14 +3,17 @@ package controller;
 
 import javax.swing.*;
 
+import contract.IBoulderDashController;
 import model.BoulderDashModel;
 import view.BoulderDashView;
 
 import java.awt.event.*;
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 
 
-public class BoulderDashController extends JFrame implements KeyListener, ActionListener{
+public class BoulderDashController extends JFrame implements KeyListener, ActionListener, IBoulderDashController {
     private BoulderDashView view;
     private BoulderDashModel boulderDashModel;
     private JPanel infoPanel;
@@ -24,9 +27,11 @@ public class BoulderDashController extends JFrame implements KeyListener, Action
         boulderDashModel = new BoulderDashModel(getLevel(currentLevel));
         view = new BoulderDashView(boulderDashModel.getCaveArray());
         this.setLayout(new BorderLayout());
-        JButton click = new JButton("Restart Current Level");
+        JButton click = new JButton("Restart Level");
         click.addActionListener(this);
         click.addKeyListener(this);
+        click.setBackground(new Color(0, 255, 0) );
+        click.setFont(new Font("Times New ", Font.BOLD, 14));
         click.setActionCommand("restart");
         infoPanel = new JPanel();
         diamonds = new JLabel(boulderDashModel.getDiamonds());
@@ -138,25 +143,25 @@ public class BoulderDashController extends JFrame implements KeyListener, Action
                    {7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7},
                    {7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7}};
         int[][] level1 = {{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
-                   {2,3,3,3,3,3,3,3,1,3,3,3,3,4,3,3,3,3,3,2},
-                   {2,3,3,3,3,3,3,3,7,3,3,3,3,4,3,3,3,3,3,2},
-                   {2,3,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
-                   {2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,4,2,2,2,2},
-                   {2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
-                   {2,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
-                   {2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
-                   {2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
-                   {2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
-                   {2,3,3,3,8,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
-                   {2,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,4,3,3,2},
-                   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,2},
-                   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,4,3,3,2},
-                   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2},
-                   {2,3,3,3,4,2,4,3,3,2,3,3,3,3,3,3,3,3,3,2},
-                   {2,3,3,3,2,2,2,3,3,2,3,4,3,3,3,3,3,3,3,2},
-                   {2,3,3,3,4,2,4,3,3,2,3,3,3,3,3,3,3,3,3,2},
-                   {2,3,3,3,3,3,3,3,3,3,3,3,3,4,3,3,3,3,3,5},
-                   {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
+        				  {2,3,3,3,3,3,3,3,1,3,3,3,3,4,3,3,3,3,3,2},
+        				  {2,3,3,3,3,3,3,3,7,3,3,3,3,4,3,3,3,3,3,2},
+        				  {2,3,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
+        				  {2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,4,2,2,2,2},
+        				  {2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
+        				  {2,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
+        				  {2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
+        				  {2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
+        				  {2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2},
+        				  {2,3,3,3,0,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2}, 
+        				  {2,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,4,3,3,2},
+        				  {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,2},
+        				  {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,4,3,3,2}, 
+        				  {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2},
+        				  {2,3,3,3,4,2,4,3,3,2,3,3,3,3,3,3,3,3,3,2},
+        				  {2,3,3,3,2,2,2,3,3,2,3,4,3,3,3,3,3,3,3,2},
+        				  {2,3,3,3,4,2,4,3,3,2,3,3,3,3,3,3,3,3,3,2},
+        				  {2,3,3,3,3,3,3,3,3,3,3,3,3,4,3,3,3,3,3,5},
+        				  {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
         int[][] level2 = {{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
                     {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
                     {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
