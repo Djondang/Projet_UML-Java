@@ -51,7 +51,10 @@ public class BoulderDashModel {
              }
          }
     }
-    public void moveUp() {
+    public BoulderDashModel() {
+		// TODO Auto-generated constructor stub
+	}
+	public void moveUp() {
         if(gameOver || levelCompleted) {
             return;
         }
