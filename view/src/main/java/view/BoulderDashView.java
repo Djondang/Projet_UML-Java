@@ -6,7 +6,6 @@ import contract.IBoulderDashView;
 
 import java.awt.GridLayout;
 
-@SuppressWarnings("serial")
 public class BoulderDashView extends JPanel implements IBoulderDashView {
     public static final int CAVE_SIZE = 20;
     private JLabel[][] labels;
@@ -20,7 +19,7 @@ public class BoulderDashView extends JPanel implements IBoulderDashView {
         icons[5] = new ImageIcon("./images/exitLocked.png");
         icons[6] = new ImageIcon("./images/exitOpen.png");
         icons[7] = new ImageIcon("./images/emptySpc.png");
-        icons[8] = new ImageIcon("./images/wall.png");
+        icons[2] = new ImageIcon("./images/wall.png");
         setLayout(new GridLayout(CAVE_SIZE,CAVE_SIZE));
         labels = new JLabel[CAVE_SIZE][CAVE_SIZE];
         for (int x = 0; x < CAVE_SIZE; x++) {

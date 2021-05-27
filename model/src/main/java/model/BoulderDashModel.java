@@ -9,7 +9,7 @@ import model.element.ExitOpen;
 import model.element.Player;
 import model.element.Wall;
 import contract.*;
-public class BoulderDashModel {       
+public class BoulderDashModel implements IBoulderDashModel {       
     public static final int CAVE_SIZE = 20;
     private Cell[][] cave;  //The currently loaded level
     private int diamondsCount;
@@ -277,7 +277,7 @@ public class BoulderDashModel {
                 } else if(cave[x][y] instanceof Dirt) {
                     System.out.print("3 ");
                 } else if(cave[x][y] instanceof Wall) {
-                    System.out.print("8 ");
+                    System.out.print("2 ");
                 } else if(cave[x][y] instanceof Boulder) {
                     System.out.print("0 ");
                 } else if(cave[x][y] instanceof ExitLocked) {
@@ -412,7 +412,7 @@ public class BoulderDashModel {
                 } else if(cave[x][y] instanceof Dirt) {
                     myArray[x][y] = 3;
                 } else if(cave[x][y] instanceof Wall) {
-                    myArray[x][y] = 8;
+                    myArray[x][y] = 2;
                 } else if(cave[x][y] instanceof Boulder) {
                     myArray[x][y] = 0;
                 } else if(cave[x][y] instanceof ExitLocked) {
