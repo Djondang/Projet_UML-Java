@@ -5,7 +5,7 @@ import javax.swing.Timer;
 
 import controller.BoulderDashController;
 
-public class BoulderDashLunch {
+public class BoulderDashLaunch {
 	
 	   public static void main (String[] args) {
 	        BoulderDashController boulderDashController = new BoulderDashController("Boulder Dash Game");
