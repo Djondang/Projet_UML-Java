@@ -2,6 +2,7 @@ package view;
 import javax.swing.*;
 
 
+
 import contract.IBoulderDashView;
 
 import java.awt.GridLayout;
