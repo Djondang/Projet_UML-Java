@@ -5,7 +5,6 @@ import javax.swing.*;
 import contract.IBoulderDashView;
 
 import java.awt.GridLayout;
-
 @SuppressWarnings("serial")
 public class BoulderDashView extends JPanel implements IBoulderDashView {
     public static final int CAVE_SIZE = 20;

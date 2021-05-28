@@ -2,13 +2,21 @@ package controller;
 
 import static org.junit.Assert.*;
 
+import org.hamcrest.Matcher;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import static org.hamcrest.CoreMatchers.instanceOf;
+
+import model.BoulderDashModel;
+import model.element.Player;
 
 public class BoulderDashControllerTest {
+	private BoulderDashModel boulderdashmodel;
+
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -18,8 +26,10 @@ public class BoulderDashControllerTest {
 	public static void tearDownAfterClass() throws Exception {
 	}
 
+	
 	@Before
 	public void setUp() throws Exception {
+		this.boulderdashmodel = new BoulderDashModel();
 	}
 
 	@After
@@ -28,7 +38,8 @@ public class BoulderDashControllerTest {
 
 	@Test
 	public void testBoulderDashController() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
+		
 	}
 
 	@Test
@@ -53,7 +64,17 @@ public class BoulderDashControllerTest {
 
 	@Test
 	public void testGetLevel() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
+		Assert.assertThat(this.testGetLevel(), instanceOf(level.class));
+	}
+
+	//private Matcher instanceOf(Class<level> class1) {
+		// TODO Auto-generated method stub
+		//return null;
+	//}
+	@Test
+	public void getPlayer() {
+    	Assert.assertThat(this.model.getPlayer(), instanceOf(Player.class));
 	}
 
 }

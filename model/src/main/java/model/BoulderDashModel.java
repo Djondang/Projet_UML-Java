@@ -427,4 +427,8 @@ public class BoulderDashModel {
         }
         return myArray;
     }
+	public Object getRockfordPosition() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

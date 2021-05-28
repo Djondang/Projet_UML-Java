@@ -11,7 +11,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 
-
 public class BoulderDashController extends JFrame implements KeyListener, ActionListener{
     private BoulderDashView view;
     private BoulderDashModel boulderDashModel;
