@@ -37,6 +37,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/MSI Gamer/Downloads/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Ucac-Icam/Ucac-Icam.X2025/Prosits/S 2/Java/Prosit 6 -  Programmation Orientée Objet  Langage Java  Langage UML  Accès aux données/Ressources/mysql-connector-java-8.0.11/mysql-connector-java-8.0.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/MSI Gamer/Downloads/com.mysql.jdbc_5.1.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
