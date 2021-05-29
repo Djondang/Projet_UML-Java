@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -29,7 +30,8 @@ public class BoulderDashViewTest {
 
 	@Test
 	public void testUpdateCave() {
-		//assertEquals(expected, BoulderDash.UpdateCave()); 
+		
+		//Assert.assertEquals(expected, BoulderDashView.updateCave(null)); 
 	}
 
 }
